@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+code{
+    width: 100%;
+    text-wrap: wrap;
+}
