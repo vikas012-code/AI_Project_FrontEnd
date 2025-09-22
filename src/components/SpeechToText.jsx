@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import blk_mic from "../assets/blk_mic.svg"
+import red_mic from "../assets/red_mic.svg"
 
 function SpeechToText({props}) {
     const {Demo,mode,setimageUrl,setresult,setloading}=props
@@ -77,9 +79,9 @@ function SpeechToText({props}) {
                 !isListing?startListening():stopListing()
             }  
             }
-            className="px-4 py-2 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition"
+            className={`transition-all duration-500  ${!isListing===true?"h-10 w-45 rounded-xl":" h-30 w-30 rounded-full"}  px-4 py-2 bg-indigo-600 text-white  hover:bg-indigo-700 `}
         >
-            {!isListing? "🎙️Start Recording" : <p className='px-4 animate-pulse '>Listing...</p>}
+            {!isListing? <div className='flex justify-center'><img className='w-5' src={blk_mic} alt="" /><p>Start Recording</p></div>: <div className='px-4 animate-pulse flex flex-col items-center'><img className='w-15' src={red_mic} alt="" /><p>Listing...</p></div>}
         </button>
     </div>
   )
