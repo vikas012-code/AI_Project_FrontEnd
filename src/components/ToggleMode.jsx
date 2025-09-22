@@ -7,12 +7,12 @@ function ToggleMode ({props}){
         <button onClick={()=>{
             setmode("text")
         }} className={`px-4 py-2 rounded-xl  shadow hover:shadow-md transition ${mode === 'text' ? 'bg-indigo-500 text-white' : 'bg-white text-blue-500'}`}>
-            📝 Content
+            Content
         </button>
         <button onClick={()=>{
             setmode("image")
         }} className={`px-4 py-2 rounded-xl  shadow hover:shadow-md transition ${mode === 'image' ? 'bg-indigo-500 text-white' : 'bg-white text-blue-500'}`}>
-            🖼️ Image
+            Image
         </button>
     </div>
     )
