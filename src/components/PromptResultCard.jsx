@@ -25,7 +25,7 @@ function PromptResultCard ({props}) {
     });
 
     return (
-      <div className={` transition-all duration-300 ${!result.length>0 && !imageUrl.length>0 ?"w-lg":"w-[80%]"} bg-white dark:bg-black rounded-2xl shadow-sm shadow-gray-900 p-6`}>
+      <div className={` transition-all duration-300 ${!result.length>0 && !imageUrl.length>0 ?"w-[50%]":"w-[80%]"} bg-white dark:bg-black rounded-2xl shadow-sm shadow-gray-900 p-6 max-sm:w-[96%]`}>
         <p className="text-sm text-gray-400 mb-2">Generated Result:</p>
         
         <>
