@@ -1,5 +1,5 @@
 function ToggleMode ({props}){
-    const {mode,setmode}=props
+    const {mode,setmode,Auth,setAuth}=props
     return (
       <div className="flex gap-4 mb-6">
         <button onClick={()=>{
@@ -8,7 +8,7 @@ function ToggleMode ({props}){
             Content
         </button>
         <button onClick={()=>{
-            setmode("image")
+            Auth?setmode("image"):setAuth(false)
         }} className={`px-4 py-2 rounded-xl  shadow hover:shadow-md transition ${mode === 'image' ? 'bg-indigo-500 text-white' : 'bg-white text-blue-500'}`}>
             Image
         </button>

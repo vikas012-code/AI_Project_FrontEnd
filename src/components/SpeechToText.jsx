@@ -3,7 +3,7 @@ import blk_mic from "../assets/blk_mic.svg"
 import red_mic from "../assets/red_mic.svg"
 
 function SpeechToText({props}) {
-    const {Demo,mode,setimageUrl,setresult,setloading}=props
+    const {mode,setimageUrl,setresult,setloading}=props
     const [textData,setTextData]=useState("")
     const [isListing,setIsListing]=useState(false)
 
@@ -73,7 +73,7 @@ function SpeechToText({props}) {
         
   return (
     <div className=" mt-4 w-full max-w-md bg-white dark:bg-black shadow-sm shadow-gray-900 rounded-2xl p-6 mb-6 flex flex-col items-center">
-        <p className="text-lg font-medium mb-2">Click the mic and speak your prompt</p>
+        <p className="text-lg font-medium mb-2 max-sm:text-sm">Click the mic and speak your prompt</p>
         <button
             onClick={()=>{
                 !isListing?startListening():stopListing()

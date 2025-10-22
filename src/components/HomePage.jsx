@@ -5,7 +5,7 @@ import PromptResultCard from './PromptResultCard'
 import icon from "../assets/icon.png"
 
 function HomePage({props}) {
-    const {mode,setmode,setloading,loading,result,imageUrl,Demo,setimageUrl,setresult}=props
+    const {mode,setmode,setloading,loading,result,imageUrl,setimageUrl,setresult,Auth,setAuth}=props
   return (
 
     <>
@@ -28,10 +28,10 @@ function HomePage({props}) {
       <div>
        <img className='w-60' src={icon} alt="" />
       </div>
-      <h1 className="text-4xl font-bold mb-6">🎙️ Voice to AI Generator</h1>
+      <h1 className="text-4xl font-bold mb-6 max-sm:text-lg">🎙️ Voice to AI Generator</h1>
         <PromptResultCard props={{loading,result,imageUrl,mode}}/>
-        <SpeechToText props={{Demo,mode,setimageUrl,setresult,setloading}} />
-        <ToggleMode props={{mode,setmode}}/>
+        <SpeechToText props={{mode,setimageUrl,setresult,setloading}} />
+        <ToggleMode props={{mode,setmode,Auth,setAuth}}/>
     </div>
 
   </div>
