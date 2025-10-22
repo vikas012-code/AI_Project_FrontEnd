@@ -26,7 +26,7 @@ function SpeechToText({props}) {
         setloading(true)
         try {
             let data
-            const res = await fetch(`http://localhost:5000/api/generate-${type}`, {
+            const res = await fetch(`https://ai-project-backend-1vla.onrender.com/api/generate-${type}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ prompt: text }),
