@@ -26,7 +26,7 @@ function HomePage({props}) {
     {/* Your Content/Components */}
     <div className='relative z-10 bg-transparent text-white min-h-screen  flex flex-col items-center justify-center p-6'>
       <div>
-       <img className='w-60' src={icon} alt="" />
+       <a href="/"><img className='w-60' src={icon} alt="" /></a>
       </div>
       <h1 className="text-4xl font-bold mb-6 max-sm:text-lg">🎙️ Voice to AI Generator</h1>
         <PromptResultCard props={{loading,result,imageUrl,mode}}/>
