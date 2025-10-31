@@ -35,7 +35,7 @@ function App() {
   console.log("image ",imageUrl)
   return(
   <>
-  {serverLoading && <ServerIsLoading/>}
+  {!serverLoading && <ServerIsLoading/>}
   <AuthPage props={{Auth,setAuth,setmode}}/>
   <HomePage props={{mode,setmode,setloading,loading,result,imageUrl,setimageUrl,setresult,Auth,setAuth}} />
   </>
